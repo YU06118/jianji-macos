@@ -71,9 +71,9 @@ JSON 备份只包含记录与分类，不含图片文件本体；迁移时如需
 - CI：`.github/workflows/macos-release.yml`
   - 推送 `v*` 标签：并行构建两个架构 → 签名 → 创建 Release，上传 2 个 DMG、2 个 `.app.tar.gz`、2 个 `.sig` 与 `latest.json`（资产名统一为 ASCII，如 `jianji_0.1.8_x64.dmg`）。
   - `workflow_dispatch`：只构建并上传 Actions artifacts，不发布 Release。
-- 签名密钥复用现有 minisign 密钥，仓库 Secrets 需配置：
-  - `TAURI_SIGNING_PRIVATE_KEY`：`~/.tauri/jianji.key` 的内容；
-  - `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`：该密钥的密码。
+- 签名密钥复用现有 minisign 密钥，仓库 Secrets：
+  - `TAURI_SIGNING_PRIVATE_KEY`：`~/.tauri/jianji.key` 的内容（已配置）；
+  - `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`：该密钥为空密码，可留空。
 - 发版步骤：改三处版本号（`desktop/src-tauri/tauri.conf.json`、`desktop/src-tauri/Cargo.toml`、`desktop/package.json`）→ 提交 → `git tag vX.Y.Z` 并推送 tag。
 
 ## 目录结构
