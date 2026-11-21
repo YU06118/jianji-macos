@@ -2,6 +2,8 @@
 
 > 本文面向需要改代码或接入数据的开发者。日常使用请看 [使用与部署说明](使用与部署说明.md)。
 > 源码中的注释与实现始终是最终依据；本文只描述稳定调用面。
+>
+> **注意**：本文件为 Windows 基线文档（命令层与 macOS 版一致）。`data_dir` 在 macOS 返回 `~/Library/Application Support/com.jianji.ledger`；macOS 构建与发版见 `README.md`。
 
 ## 一、桌面端：Tauri 命令层
 

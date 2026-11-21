@@ -33,9 +33,13 @@
   },
   "bundle": {
     "active": true,
-    "targets": ["nsis"],
+    "targets": ["app", "dmg"],
     "createUpdaterArtifacts": true,
-    "icon": ["icons/icon.ico"],
+    "icon": ["icons/icon.icns"],
+    "macOS": {
+      "minimumSystemVersion": "11.0",
+      "signingIdentity": null
+    },
     "copyright": "简记",
     "category": "Finance",
     "shortDescription": "轻奢简洁的个人记账工具",
@@ -45,11 +49,8 @@
     "updater": {
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDZCMzA5MjZFMEFFN0E2QTQKUldTa3B1Y0ticEl3YTVocWU0bDBhOGV2TUJiZnRsTVFOU0dOTDdjZWJmZTloSWFwbFFyMTJRZjEK",
       "endpoints": [
-        "https://github.com/YU06118/jianji/releases/latest/download/latest.json"
-      ],
-      "windows": {
-        "installMode": "passive"
-      }
+        "https://github.com/YU06118/jianji-macos/releases/latest/download/latest.json"
+      ]
     }
   }
 }

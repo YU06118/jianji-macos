@@ -5,6 +5,8 @@
  */
 (function () {
   'use strict'
+  // macOS：窗口用系统原生 decorations，隐藏自绘的仿 macOS 标题栏（见 index.html .is-macos）
+  if (/Mac/i.test(navigator.platform || navigator.userAgent)) document.documentElement.classList.add('is-macos')
   const IN_TAURI = typeof window !== 'undefined' && !!window.__TAURI_INTERNALS__
   const invoke = IN_TAURI
     ? (cmd, args) => window.__TAURI_INTERNALS__.invoke(cmd, args || {})
@@ -601,7 +603,7 @@
     const img = document.getElementById('receipt-img')
     const mask = document.getElementById('receipt-modal')
     if (!img || !mask) return
-    const full = dir.replace(/[\\/]+$/, '') + '\\images\\' + rec.image
+    const full = dir.replace(/[\\/]+$/, '') + '/images/' + rec.image
     img.onerror = () => toast('小票文件不存在或已移动')
     img.src = window.__TAURI__.core.convertFileSrc(full)
     mask.classList.add('show')

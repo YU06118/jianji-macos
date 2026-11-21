@@ -139,7 +139,7 @@ fn data_dir(state: tauri::State<'_, AppState>) -> String {
 
 // ---------- 命令：热更新（自动更新）----------
 const OFFICIAL_ENDPOINT: &str =
-    "https://github.com/YU06118/jianji/releases/latest/download/latest.json";
+    "https://github.com/YU06118/jianji-macos/releases/latest/download/latest.json";
 /// 镜像源（腾讯 COS）开通后填入，如 "https://<bucket>.cos.ap-guangzhou.myqcloud.com/latest.json"
 const MIRROR_ENDPOINT: Option<&str> = None;
 
