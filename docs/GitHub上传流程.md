@@ -48,7 +48,7 @@ git tag vX.Y.Z && git push origin main vX.Y.Z
 ```
 
 CI（`.github/workflows/macos-release.yml`，约 15–25 分钟）自动完成：
-1. `macos-14` 上按矩阵分别构建 `x86_64-apple-darwin`（Intel）与 `aarch64-apple-darwin`（Apple Silicon）
+1. `macos-15`（arm64）上按矩阵分别构建 `x86_64-apple-darwin`（Intel）与 `aarch64-apple-darwin`（Apple Silicon）
 2. 使用 Secrets 中的 minisign 私钥签名，产出 2 个 DMG、2 个 `.app.tar.gz`、2 个 `.sig`
 3. 资产重命名为 ASCII（`jianji_x.y.z_x64.*` / `jianji_x.y.z_aarch64.*`）
 4. 生成 `latest.json`（含 `darwin-x86_64` 与 `darwin-aarch64`），创建/复用 Release 并上传全部资产
@@ -64,10 +64,10 @@ CI（`.github/workflows/macos-release.yml`，约 15–25 分钟）自动完成�
 
 | Secret | 用途 | 状态 |
 |---|---|---|
-| `TAURI_SIGNING_PRIVATE_KEY` | 更新包 minisign 签名私钥（`~/.tauri/jianji.key` 的内容） | ⬜ 待配置 |
-| `TAURI_SIGNING_PRIVATE_KEY_PASSWORD` | 私钥密码 | ⬜ 待配置 |
+| `TAURI_SIGNING_PRIVATE_KEY` | 更新包 minisign 签名私钥（`~/.tauri/jianji.key` 的内容） | ✅ 已配置 |
+| `TAURI_SIGNING_PRIVATE_KEY_PASSWORD` | 私钥密码（现有私钥为空密码，无需配置） | — 可留空 |
 
-> 两个 Secret 任一缺失时构建出的更新包无法被客户端验签，自动更新会失败。私钥文件本体在 `~/.tauri/jianji.key`，**丢失将无法签发后续更新**，务必备份。本仓库不配置 COS 镜像同步。
+> 私钥已有空密码，工作流未取到密码时按空密码签名；若日后更换为带密码的私钥，再补充 `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`。私钥文件本体在 `~/.tauri/jianji.key`，**丢失将无法签发后续更新**，务必备份。本仓库不配置 COS 镜像同步。
 
 ## 六、不入库内容（.gitignore）
 
