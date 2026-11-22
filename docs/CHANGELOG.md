@@ -4,7 +4,7 @@
 
 ## 桌面端（Tauri v2）
 
-> 以下 v0.1.1–v0.1.8 为 Windows 基线（`jianji-desktop`）的历史记录。本仓库为 macOS 版，自 0.1.8 起发布；macOS 构建、安装与发版见 `README.md` 与 `docs/使用与部署说明.md`。
+> 以下 v0.1.1–v0.1.8 为 Windows 基线（`jianji-windows`，原名 jianji-desktop）的历史记录。本仓库为 macOS 版，自 0.1.8 起发布；macOS 构建、安装与发版见 `README.md` 与 `docs/使用与部署说明.md`。
 
 ### v0.1.8 — 2026-11-19
 

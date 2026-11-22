@@ -12,7 +12,7 @@
 | 文档（需求/部署/热更新/GitHub） | `docs/` |
 | 发布流水线（tag 触发双架构构建、签名、发布） | `.github/workflows/macos-release.yml` |
 
-Windows 桌面端源码与安装包在 `YU06118/jianji-desktop`；微信小程序端在 `YU06118/jianji-miniprogram`。
+Windows 桌面端源码与安装包在 `YU06118/jianji-windows`；微信小程序端（主端）在 `YU06118/jianji-miniprogram`；四端总导航在 `YU06118/jianji`。
 
 同步约定：**每完成一个文件/模块即提交并推送一次**。
 

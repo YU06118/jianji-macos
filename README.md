@@ -2,8 +2,8 @@
 
 家庭记账工具「简记」的 macOS 桌面端，基于 **Tauri v2 + SQLite** 构建，数据完全存本机。
 
-> 本仓库 `YU06118/jianji-macos` 由 Windows 桌面端仓库 [`YU06118/jianji-desktop`](https://github.com/YU06118/jianji-desktop) 拆分而来，版本 **0.1.8**，产品名「简记」，应用标识符 `com.jianji.ledger`。
-> Windows 安装包（NSIS/MSI）继续由 `jianji-desktop` 仓库发布，本仓库不再构建 Windows 产物；微信小程序端见 [`YU06118/jianji-miniprogram`](https://github.com/YU06118/jianji-miniprogram)。
+> 本仓库 `YU06118/jianji-macos` 由 Windows 桌面端仓库 [`YU06118/jianji-windows`](https://github.com/YU06118/jianji-windows)（原名 `jianji-desktop`）拆分而来，版本 **0.1.8**，产品名「简记」，应用标识符 `com.jianji.ledger`。
+> Windows 安装包（NSIS/MSI）由 `jianji-windows` 仓库发布，本仓库不再构建 Windows 产物；微信小程序端（主端）见 [`YU06118/jianji-miniprogram`](https://github.com/YU06118/jianji-miniprogram)；四端总导航（文档集合与直达）见 [`YU06118/jianji`](https://github.com/YU06118/jianji)。
 
 ## 平台支持
 
